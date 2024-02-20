@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Remove Number Input Scroll */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .input {
+    @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
+  }
+
+  .clickable-input {
+    @apply bg-transparent cursor-pointer text-center border-none outline-none dark:hover:text-gray-400 dark:focus:text-slate-gray;
+  }
+
+  .class-button {
+    @apply rounded-xl cursor-pointer justify-center items-center text-center flex flex-col border-white border-2;
+  }
+
+  .dropdown-item {
+    @apply p-3 text-white border-[1px] border-black block;
+  }
+
+  .custom-modal .modal-content {
+    height: 60vh;
+  }
+
+  .pdf-modal .modal-content {
+    height: 90vh;
+    width: 80vh;
+  }
+
+  .features-modal .modal-content {
+    height: 70vh;
+  }
+
+  .auth-button {
+    @apply border-2 rounded-lg p-3 m-3 cursor-pointer hover:bg-white hover:text-black active:bg-slate-300;
+  }
+
+  .auth-input {
+    @apply w-[20vw] h-[4vh] rounded-lg p-3 m-3;
+  }
+
+  .user-input {
+    @apply w-[30vw] h-[4vh] rounded-lg p-6 m-3 text-black text-center text-xl;
+  }
+}
+
+@layer utilities {
+  .padding {
+    @apply sm:px-16 px-8 sm:py-24 py-12;
+  }
+
+  .padding-x {
+    @apply sm:px-16 px-8;
+  }
+
+  .padding-y {
+    @apply sm:py-24 py-12;
+  }
+
+  .padding-l {
+    @apply sm:pl-16 pl-8;
+  }
+
+  .padding-r {
+    @apply sm:pr-16 pr-8;
+  }
+
+  .padding-t {
+    @apply sm:pt-24 pt-12;
+  }
+
+  .padding-b {
+    @apply sm:pb-24 pb-12;
+  }
+
+  .info-text {
+    @apply font-montserrat text-slate-gray text-lg leading-7;
+  }
+}
